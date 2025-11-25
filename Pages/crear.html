@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info estudiante</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!--Contenido visual estatico-->
+    <header>
+        <h1>Sistema de Información de Estudiantes</h1>
+    </header>
+    <div class="enlaces">
+        <a href="./crear.html"><p>Crear estudiante</p></a>
+        <a href="./listar.html"><p>Listar estudiantes</p></a>
+        <a href="./eliminar.html"><p>Eliminar estudiante</p></a>
+    </div>
+
+    <!--Formulario de crear estudiante-->
+    <form id="formulario">
+        <h2>Crear nuevo estudiante</h2>
+        <div class="inputs-cont">
+            <label for="nombre-form">Nombre</label>
+            <input type="text" id="nombre-form" name="nombre-form" required>
+        </div>
+        
+        <div class="inputs-cont">
+            <label for="apellidos-form">Apellidos</label>
+            <input type="text" id="apellidos-form" name="apellidos-form" required>
+        </div>
+        
+        <div class="inputs-cont">
+            <label for="edad-form">Edad</label>
+            <input type="number" id="edad-form" name="edad-form" required>
+        </div>
+        
+        <div class="inputs-cont">
+            <label for="carrera-form">Carrera</label>
+            <select id="carrera-form" name="carrera-form" required>
+                <option value="0">-Selecciona una opción--</option>
+            </select>
+        </div>
+       
+        <div class="inputs-cont">
+            <label for="estrato-form">Estrato</label>
+             <input type="number" id="estrato-form" name="estrato-form" required>
+        </div>
+
+        <div class="boton-cont">
+            <button id="boton-form">Enviar</button>
+        </div>
+    </form>
+
+
+    <script src="../Scripts/crear.js"></script>
+</body>
+</html>

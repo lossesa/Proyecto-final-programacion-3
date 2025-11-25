@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos del header y nav */
+header{
+    background-color: rgb(223, 205, 240);
+    padding: 20px;
+}
+
+header h1{
+    text-align: center;
+}
+
+.enlaces{
+    background-color: #1b1a1a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.enlaces a{
+    text-decoration: none;
+    color: rgb(255, 254, 254);
+    padding: 0 20px;
+}
+
+.enlaces a:hover{
+    color: rgb(223, 205, 240);
+}
+
+
+/* Estilos del formulario de crear.html */
+
+form {
+    width: 50%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1b1a1a;
+}
+
+.inputs-cont {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-cont label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1b1a1a;
+}
+
+.inputs-cont input,
+.inputs-cont select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.inputs-cont input:focus,
+.inputs-cont select:focus {
+    outline: none;
+    border-color: rgb(223, 205, 240);
+    box-shadow: 0 0 5px rgba(223, 205, 240, 0.7);
+}
+
+.boton-cont {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#boton-form {
+    background-color: rgb(149, 43, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#boton-form:hover {
+    background-color: rgb(120, 20, 220);
+}
+
+
+
+/* Estilos del formulario de listar.html */
+
+#tabla-estudiantes {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f4fc; /* Tonalidad suave para la tabla */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+#tabla-estudiantes th, #tabla-estudiantes td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+#tabla-estudiantes thead {
+    background-color: rgb(223, 205, 240); 
+    color: #1b1a1a; 
+    font-weight: bold;
+}
+
+#tabla-estudiantes tbody tr:hover {
+    background-color: #e3d5f0; 
+    cursor: pointer;
+}
+
+#tabla-estudiantes th {
+    border-bottom: 2px solid #1b1a1a;
+}
+
+#tabla-estudiantes td {
+    color: #1b1a1a;
+}
+
+
+
+/* Estilos del formulario de eliminar.html */
+
+.form-eliminar {
+    background-color: #f4eafa;                   
+    border: 2px solid rgb(223, 205, 240);       
+    border-radius: 12px;
+    padding: 30px;
+    width: 350px;
+    margin: 40px auto;                         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-eliminar label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1d1d1d;
+}
+
+.form-eliminar input {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #888;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-eliminar button {
+    background-color: rgb(149, 43, 255);         
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.form-eliminar button:hover {
+    background-color: rgb(120, 20, 220);
+}

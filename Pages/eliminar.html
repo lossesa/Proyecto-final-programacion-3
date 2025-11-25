@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info estudiante</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!--Contenido visual estatico-->
+    <header>
+        <h1>Sistema de Información de Estudiantes</h1>
+    </header>
+    <div class="enlaces">
+        <a href="./crear.html"><p>Crear estudiante</p></a>
+        <a href="./listar.html"><p>Listar estudiantes</p></a>
+        <a href="./eliminar.html"><p>Eliminar estudiante</p></a>
+    </div>
+
+    <!--Contenido visual estatico-->
+    <div class="form-eliminar">
+        <label for="id-estudiante">Id Estudiante</label>
+        <input type="number" id="id-estudiante">
+
+        <button onclick="eliminarEstudiante()">Eliminar</button>
+    </div>
+
+      <script src="../Scripts/eliminar.js"></script>
+</body>
+</html>
