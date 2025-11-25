@@ -32,6 +32,44 @@ header h1{
 }
 
 
+/* Estilos del index.html */
+.inicio-cont {
+    width: 100%;
+    max-width: 450px;
+    min-width: 300px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(120, 20, 220, 0.3);
+}
+
+.inicio-cont h1 {
+    margin-bottom: 20px;
+}
+
+.inicio-cont p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.enlace-boton {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgb(149, 43, 255);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.enlace-boton:hover {
+    background-color: rgb(120, 20, 220);
+}
+
+
+
 /* Estilos del formulario de crear.html */
 form {
     width: 100%;
@@ -98,11 +136,11 @@ form h2 {
 }
 
 
-
 /* Estilos del formulario de listar.html */
-
 #tabla-estudiantes {
     width: 90%;
+    max-width: 1000px;
+    min-width: 300px; 
     margin: 30px auto;
     border-collapse: collapse;
     font-family: Arial, Helvetica, sans-serif;
