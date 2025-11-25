@@ -1,15 +1,31 @@
 
 // Codigo JS para crear estudiante
 
-// 1. Estructura base
+// Codigo de repuesto de mockable
+// {
+//   "carreras": [
+//     { "id": 1, "nombre": "Ingeniería de Sistemas" },
+//     { "id": 2, "nombre": "Administración de empresas" },
+//     { "id": 3, "nombre": "Contaduría" },
+//     { "id": 4, "nombre": "Psicología" },
+//     { "id": 5, "nombre": "Medicina" },
+//     { "id": 6, "nombre": "Enfermeria" },
+//     { "id": 7, "nombre": "Ingenieria industrial" },
+//     { "id": 8, "nombre": "Ingenieria civil" }
+//   ]
+// }
+
+
+
+// 1. Objeto inicial en donde se van a guardar los estudiantes. 
 const estudiante = {"listaEstudiantes": []};
 
-// 2. Guardar estudiantes
+// 2. Convierte el objeto inicial a JSON y se guarda en el localStorage.
 function guardarEstudiantes(obj) {
     localStorage.setItem("students", JSON.stringify(obj));
 }
 
-// 3. Cargar estudiantes
+// 3. Valida si ya hay estudiantes y los convierte a JSON, si no, devuelve el objeto inicial.
 function cargarEstudiantes() {
     let datosGuardados = localStorage.getItem("students");
 
@@ -21,8 +37,8 @@ function cargarEstudiantes() {
 }
 
 
-// 4. Obtener endpoint de carreras
-async function obtenerUsuarios() {
+// 4. Obtención del endpoint de las carreras en Mockable.
+async function obtenerCarreras() {
     try {
         const respuesta = await fetch('https://demo4673823.mockable.io/carreras ');
         const datos = await respuesta.json();
@@ -31,10 +47,10 @@ async function obtenerUsuarios() {
         console.log('Error: ', error);
     }
 }
-obtenerUsuarios();
+obtenerCarreras();
 
 
-// 5. Cargar carreras al select
+// 5. Recorre el arreglo de carreras y para cada un crea un option en el select con su respectivo value y nombre de la carrera.
 function cargarCarreras(datos) {
     let carrera = document.getElementById('carrera-form');
 
@@ -47,12 +63,10 @@ function cargarCarreras(datos) {
 }
 
 
-// 5. Funcion para capturar los datos del formulario 
+// 6. Guardar estudiante desde el formulario.
 function guardar(){
-    // Carga los estudiantes almacenados
     let estudiantes = cargarEstudiantes(); 
 
-    // Captura los datos del form
     let nombre = document.getElementById("nombre-form").value;
     let apellido = document.getElementById("apellidos-form").value;
     let edad = document.getElementById("edad-form").value;
@@ -60,13 +74,13 @@ function guardar(){
     let estrato = document.getElementById("estrato-form").value;
 
 
-    // Validación para que no se guarden estudiantes con datos incompletos en el form
+    // Evita que se guarden estudiantes con datos incompletos.
      if (nombre === "" || apellido === "" || edad === "" || carrera === "0" || estrato === "") {
         alert("Por favor completa todos los campos.");
         return;
     }
     
-    // Crear objeto del estudiante nuevo
+    // Crear objeto del estudiante nuevo.
     const nuevoEstudiante = {
         nombre: nombre,
         apellido: apellido,
@@ -75,20 +89,14 @@ function guardar(){
         estrato: estrato
     };
 
-
-    // Agregar estudiante al final de la lista
     estudiantes.listaEstudiantes.push(nuevoEstudiante);
-
-    // Guardar en el localStorage
     guardarEstudiantes(estudiantes);
     alert("Estudiante agregado correctamente!");
-
-    // Para limpiar los datos del form
     document.getElementById("formulario").reset();
 }
 
 
-// 7. Evento del botón
+// 7. Evento del botón 
 document.getElementById("boton-form").addEventListener("click", function(e){
     e.preventDefault();
     guardar();

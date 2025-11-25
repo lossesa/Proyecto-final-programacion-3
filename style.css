@@ -28,14 +28,16 @@ header h1{
 
 .enlaces a:hover{
     color: rgb(223, 205, 240);
+    border-left: 1px solid rgb(223, 205, 240);
 }
 
 
 /* Estilos del formulario de crear.html */
-
 form {
-    width: 50%;
-    margin: 30px auto;
+    width: 100%;
+    max-width: 450px;
+    min-width: 300px;
+    margin: 50px auto;
     background: #ffffff;
     padding: 25px;
     border-radius: 10px;
